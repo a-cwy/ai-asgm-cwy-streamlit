@@ -37,19 +37,10 @@ if st.button("Predict"):
             'SessionsPerWeek':[sessions_per_week],
             'AvgSessionDurationMinutes':[avg_session_duration_mins],
             'AchievementsUnlocked':[achievements_unlocked],
-            'PlayerLevel':[player_level],
-            'GameDifficulty':[0],
-            'Gender':[0],
-            'GameGenre':[0],
-            'InGamePurchases':[0],
-            'Age':[0],
-            'Location':[0],
-            'PlayTimeHours':[0],
-            'PlayerID':[0]
+            'PlayerLevel':[player_level]
         }
     )
     rf_pred = rf.predict(X)
-    X = X[['SessionsPerWeek', 'AvgSessionDurationMinutes', 'AchievementsUnlocked', 'PlayerLevel']]
     cb_pred = cb.predict(X)
     svm_pred = svm.predict(sd_scl.transform(X))
 
