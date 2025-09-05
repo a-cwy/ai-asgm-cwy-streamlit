@@ -11,13 +11,13 @@ svm_labels = ['', 'Low', 'Medium', 'High']
 
 #setup models
 cb = CatBoostClassifier()
-cb.load_model('/workspaces/ai-asgm-cwy-streamlit/models/catboost_tuned.cbm')
+cb.load_model('models/catboost_tuned.cbm')
 rf = RandomForestClassifier()
-rf = joblib.load('/workspaces/ai-asgm-cwy-streamlit/models/rf_tuned.joblib')
+rf = joblib.load('models/rf_tuned.joblib')
 sd_scl = StandardScaler()
-sd_scl = joblib.load('/workspaces/ai-asgm-cwy-streamlit/models/scaler.joblib')
+sd_scl = joblib.load('models/scaler.joblib')
 svm = SVC()
-svm = joblib.load('/workspaces/ai-asgm-cwy-streamlit/models/base_ovr_73.joblib')
+svm = joblib.load('models/base_ovr_73.joblib')
 
 st.set_page_config(
     page_title='AI Dashboard',
