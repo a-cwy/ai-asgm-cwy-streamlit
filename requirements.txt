@@ -1,5 +1,7 @@
 streamlit
-joblib
+streamlit-pandas-profiling
+ydata_profiling
+joblib==1.5.2
 scikit-learn==1.6.1
 catboost
 pandas
